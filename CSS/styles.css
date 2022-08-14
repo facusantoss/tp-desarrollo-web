@@ -11,7 +11,7 @@
 
 /* color fondo de paginas*/
 body{
-    background-color: lightblue;
+    background-image: linear-gradient(to bottom, rgb(74, 166, 228), lightblue);
    
 }
 
@@ -41,9 +41,15 @@ h1{
     text-align: end;
     }
 
+    header nav ul li:hover{
+        background-color: cornflowerblue;
+        transform: scale(0.9);
+    box-shadow: 1px 1px 10px black;
+    }   
+
 
 .caja{
-    background-color:rgb(98, 166, 245);
+    background-color:rgb(235, 238, 241);
     position: sticky;
     padding: 2px;
     border: 2px solid rgb(109, 132, 233);
@@ -328,37 +334,61 @@ h1{
         width: 150px;
         height: 100px;
         border-style: solid;
-        margin: 20px 20px 20px 70px;        
+        margin: 20px 20px 20px 70px;    
+        box-shadow: 2px 8px 10px black;    
     }
+
+.fotoCuatro:hover{
+    transform: scale(1.1);
+}
 
 .fotoCinco{
         width: 150px;
         height: 100px;
         border-style: solid;
-        margin: 20px 20px 20px 70px;        
+        margin: 20px 20px 20px 70px; 
+        box-shadow: 2px 8px 10px black;       
     }
+
+.fotoCinco:hover{
+    transform: scale(1.1);
+}
 
 .fotoSeis{
         width: 150px;
         height: 100px;
         border-style: solid;
-        margin: 20px 20px 20px 70px;        
+        margin: 20px 20px 20px 70px; 
+        box-shadow: 2px 8px 10px black;       
     }
+
+.fotoSeis:hover{
+    transform: scale(1.1);
+}
 
 .fotoSiete{
         width: 150px;
         height: 100px;
         border-style: solid;
-        margin: 20px 20px 20px 70px;        
+        margin: 20px 20px 20px 70px;
+        box-shadow: 2px 8px 10px black;        
     }
+
+.fotoSiete:hover{
+    transform: scale(1.1);
+}    
 
 .fotoOcho{
         width: 150px;
         height: 100px;
         border-style: solid;
-        margin: 20px 20px 20px 70px;        
+        margin: 20px 20px 20px 70px;
+        box-shadow: 2px 8px 10px black;     
     }
 
+    .fotoOcho:hover{
+    transform: scale(1.1);
+}
 
 
     .parrafoTer1{
