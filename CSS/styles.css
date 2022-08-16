@@ -43,7 +43,6 @@ body{
 
 .caja{
     background-color:rgb(235, 238, 241);
-    position: sticky;
     padding: 2px;
     border: 2px solid rgb(109, 132, 233);
     display: inline-block;
