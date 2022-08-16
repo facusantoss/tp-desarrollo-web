@@ -334,6 +334,9 @@ body{
         
     }
 
+.logo{
+    width: 8%;
+}
 
 /* h2 de compañia*/
 
@@ -479,6 +482,7 @@ body{
         align-items: center;
 	}
 }
+
 
 
 
