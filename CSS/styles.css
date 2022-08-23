@@ -67,21 +67,20 @@ body{
 .subtitulo2{
   /*  height: 100px;*/
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 10rem;
 }
 
      
 
 /* vision mision y valores */
 
-.padre{
-    background-color: rgb(162, 206, 206);
-    
-    height: 200px;
+.padre{    
+    height: 400px;
     font-family:sans-serif;
-    justify-content: space-around;
     display: grid;
-    grid-template-columns: auto auto auto ;
-    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+    
 }
 
 /* mediaqueries*/
@@ -172,10 +171,13 @@ body{
 
     /* fotos y texto de auto, casa y comercio*/
 .padre2{
+    height: 500px;
     justify-content: space-evenly;
     display: grid;
     grid-template-columns: auto auto auto ;
     grid-template-rows: 0.5fr 1fr;
+    
+    
 
 
     grid-template-areas: 
@@ -315,6 +317,72 @@ body{
     }
 
 }
+
+.SectorSiniestros{
+    height: 350px;
+}
+
+.SiniestroAuto{
+font-size: x-large;
+}
+
+.siniestroTres{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
+    
+
+    grid-template-areas: 
+                        "Icono1 Dato1 Dato1Cont"
+                        "Icono2 Dato2 Dato2Cont"
+                        "Icono3 Dato3 Dato3Cont";
+
+}
+
+.Icono1{
+    grid-area: Icono1;
+    
+}
+
+.Icono2{
+    grid-area: Icono2;
+}
+
+.Icono3{
+    grid-area: Icono3;
+}
+
+.Dato1{
+    grid-area: Dato1;
+    font-size: x-large;
+}
+
+.Dato2{
+    grid-area: Dato2;
+    font-size: x-large;
+}
+
+.Dato3{
+    grid-area: Dato3;
+    font-size: x-large;
+}
+
+.Dato1Cont{
+    grid-area: Dato1Cont;
+    font-size: larger;
+}
+
+.Dato2Cont{
+    grid-area: Dato2Cont;
+    font-size: larger;
+}
+
+.Dato3Cont{
+    grid-area: Dato3Cont;
+    font-size: larger;
+}
+
 /* color y centrado del footer*/
 .derechos {
     text-align: center;
@@ -333,6 +401,7 @@ body{
         
     }
 
+
 .logo{
     width: 8%;
 }
@@ -350,20 +419,16 @@ body{
 .SegSin{
 	display: grid;
 	grid-template-columns: auto ;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto ;
+    grid-template-rows: auto;
 
 
     grid-template-areas: 
-		    "fotoCuatro"
-		    "parrafoTer1"
-		    "fotoCinco"
-		    "parrafoTer2"
-		    "fotoSeis"
-		    "parrafoTer3"
-		    "fotoSiete"
-		    "parrafoTer4"
-		    "fotoOcho"
-		    "parrafoTer5"
+		    "fotoCuatro parrafoTer1"
+		    "fotoCinco parrafoTer2"
+		    "fotoSeis parrafoTer3"
+		    "fotoSiete parrafoTer4"
+		    "fotoOcho parrafoTer5"
+		
 }
 
 
@@ -372,7 +437,8 @@ body{
         height: 100px;
         border-style: solid;
         margin: 20px 20px 20px 70px;    
-        box-shadow: 2px 8px 10px black;    
+        box-shadow: 2px 8px 10px black; 
+        grid-area: fotoCuatro;   
     }
 
 .fotoCuatro:hover{
@@ -384,7 +450,8 @@ body{
         height: 100px;
         border-style: solid;
         margin: 20px 20px 20px 70px; 
-        box-shadow: 2px 8px 10px black;       
+        box-shadow: 2px 8px 10px black;
+        grid-area: fotoCinco;       
     }
 
 .fotoCinco:hover{
@@ -396,7 +463,8 @@ body{
         height: 100px;
         border-style: solid;
         margin: 20px 20px 20px 70px; 
-        box-shadow: 2px 8px 10px black;       
+        box-shadow: 2px 8px 10px black;  
+        grid-area: fotoSeis;     
     }
 
 .fotoSeis:hover{
@@ -408,7 +476,8 @@ body{
         height: 100px;
         border-style: solid;
         margin: 20px 20px 20px 70px;
-        box-shadow: 2px 8px 10px black;        
+        box-shadow: 2px 8px 10px black;
+        grid-area: fotoSiete;   
     }
 
 .fotoSiete:hover{
@@ -420,7 +489,8 @@ body{
         height: 100px;
         border-style: solid;
         margin: 20px 20px 20px 70px;
-        box-shadow: 2px 8px 10px black;     
+        box-shadow: 2px 8px 10px black; 
+        grid-area: fotoOcho;    
     }
 
     .fotoOcho:hover{
@@ -429,48 +499,53 @@ body{
 
 
     .parrafoTer1{
-        background-color: coral;
+        background-color:rgb(182, 220, 245);
         text-align: center;
         border-style: solid;
         border-width: 1.5px;
         margin: 20px;
         padding: 20px;
+        grid-area: parrafoTer1;
     }
 
 .parrafoTer2{
-        background-color: coral;
+        background-color: rgb(182, 220, 245);
         text-align: center;
         border-style: solid;
         border-width: 1.5px;
         margin: 20px;
         padding: 20px;
+        grid-area: parrafoTer2;
     }
 
 .parrafoTer3{
-        background-color: coral;
+        background-color: rgb(182, 220, 245);
         text-align: center;
         border-style: solid;
         border-width: 1.5px;
         margin: 20px;
         padding: 20px;
+        grid-area: parrafoTer3;
     }
 
 .parrafoTer4{
-        background-color: coral;
+        background-color: rgb(182, 220, 245);
         text-align: center;
         border-style: solid;
         border-width: 1.5px;
         margin: 20px;
         padding: 20px;
+        grid-area: parrafoTer4;
     }
 
 .parrafoTer5{
-        background-color: coral;
+        background-color: rgb(182, 220, 245);
         text-align: center;
         border-style: solid;
         border-width: 1.5px;
         margin: 20px;
         padding: 20px;
+        grid-area: parrafoTer5;
     }
 
 /* mediaqueries*/
@@ -505,3 +580,9 @@ body{
     }
 
 
+.padre3{
+        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        grid-template-rows: 0.5fr 1fr;
+}

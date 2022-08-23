@@ -35,6 +35,9 @@
                     <a class="nav-link" href="./pages/siniestros.html">Siniestros</a>
                   </li>
                   <li class="nav-item caja">
+                    <a class="nav-link" href="./pages/blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item caja">
                     <a class="nav-link" href="./pages/contacto.html">Contacto</a>
                   </li>
                 </ul>
@@ -51,46 +54,99 @@
     </main> 
 
 
-    <section class="padre">
-        <div>   
-            <h3 class="modo1"> Vision: </h3>
-            <p class="parrafo1"> Ser un Broker referente en el mercado asegurador argentino, por la constante innovacion en servicio y el ofrecimiento de un respaldo solido a nuestros clientes. </p>
-        </div> 
-        <div>
-            <h3 class="modo2"> Mision: </h3>
-            <p class="parrafo2"> Brindar confianza a nuestros clientes, a traves de soluciones integrales   en seguros y un servicio diferencial que cree vínculos de largo plazo con ellos.</p>
-        </div>
-        <div>
-            <h3 class="modo3"> Valores: </h3>
-            <p class="parrafo3"> Nuestros valores son Integridad, Confianza, Foco en el cliente, Innovacion.</p>
-        </div>
+    <section class="padre d-flex justify-content-center" >
+      <div class="row-6 ">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body bg-dark text-light">
+              <h3 class="card-title">Vision</h3>
+              <p class="card-text">Ser un Broker referente en el mercado asegurador argentino, por la constante innovacion en servicio y el ofrecimiento de un respaldo solido a nuestros clientes.</p>
+            </div>
+          </div>
+        </div>    
+      </div> 
+      <div class="row-6">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body bg-dark text-light">
+              <h3 class="card-title">Mision</h3>
+              <p class="card-text">Brindar confianza a nuestros clientes, a traves de soluciones integrales   en seguros y un servicio diferencial que cree vínculos de largo plazo con ellos.</p>
+            </div>
+          </div>
+        </div>    
+      </div> 
+      <div class="row-4">
+        <div class="col-sm-8">
+          <div class="card">
+            <div class="card-body bg-dark text-light">
+              <h3 class="card-title">Valores</h3>
+              <p class="card-text">Nuestros valores son Integridad, Confianza, Foco en el cliente, Innovacion.</p>
+            </div>
+          </div>
+        </div>    
+      </div> 
     </section>
 
     
 
     <section class="padre2">
-        <div class="hijo">
-            <img class= "fotoUno" src="./img/Auto.jpg" alt="imagen de auto">
-            <p class="parrafoSec1"> Cotiza y asegura tu vehiculo con nosotros. Todos tus problemas estan al alcance de nuestras manos. </p>
+      <div class="card" style="width: 18rem;">
+        <img src="img/Auto.jpg" class="card-img-top" alt="imagen auto">
+        <div class="card-body">
+          <h4 class="card-title">Auto</h4>
+          <p class="card-text">Cotiza y asegura tu vehiculo con nosotros. Todos tus problemas estan al alcance de nuestras manos.</p>
+          <a href="./pages/seguros.html" class="btn btn-primary">Ir a Seguros</a>
         </div>
+      </div>
                 
-        <div class="hijo">
-            <img class= "fotoDos" src="./img/casa.jpg" alt="imagen de casa">
-            <p class="parrafoSec2"> Asegura tu casa para que toda la familia, duerma con tranquilidad. </p>
+      <div class="card" style="width: 18rem;">
+        <img src="img/casa.jpg" class="card-img-top" alt="imagen casa">
+        <div class="card-body">
+          <h4 class="card-title">Casa</h4>
+          <p class="card-text">Cotiza y asegura tu casa para que toda la familia duerma con tranquilidad.</p>
+          <a href="./pages/seguros.html" class="btn btn-primary">Ir a Seguros</a>
         </div>
+      </div>
 
-        <div class="hijo">
-            <img class= "fotoTres" src="./img/comercio.jpg" alt="imagen de comercio">
-            <p class="parrafoSec3"> Si sos el sosten de la familia, asegura tu comercio y olvidate de empezar de cero. </p>
+      <div class="card" style="width: 18rem;">
+        <img src="img/comercio2.jpg" class="card-img-top" alt="imagen comercio">
+        <div class="card-body">
+          <h4 class="card-title">Comercio</h4>
+          <p class="card-text"> ¿Sos el sostén de la familia? Asegurá tu comercio y trabajá sin miedo. Nosotros te cuidamos.</p>
+          <a href="./pages/seguros.html" class="btn btn-primary">Ir a Seguros</a>
         </div>
+      </div>
+    </section>
+
+    <section class="SectorSiniestros">
+        <h5 class="SiniestroAuto"> Siniestros Autos</h5>
+        <p> ¿Que hacer en caso de siniestro?</p>
+        <p> En caso de siniestro tome los datos del otro vehículo. Los datos importantes a tomar son:</p>
+
+      <div class="siniestroTres">
+        <img src="./img/iconoPersona.jpg" alt="" class="Icono1">
+        <h5 class="Dato1"> Datos del Conductor</h5>
+        <p class="Dato1Cont">Nombre y apellido, DNI y un teléfono de contacto.</p>
+
+        <img src="./img/iconoAutito.png" alt="" class="Icono2">
+        <h5 class="Dato2">Datos del otro vehículo</h5>
+        <p class="Dato2Cont">Marca y modelo, Patente y daños que tuvo (los visibles).</p>
+
+        <img src="./img/IconoFormularios.png" alt="" class="Icono3">
+        <h5 class="Dato3"> Datos aseguradora</h5>
+        <p class="Dato3Cont">Compañía Aseguradora y número de póliza.</p>
+      </div>
     </section>
 
 
     <footer class="container">
         <div class="row d-flex justify-content-center">
             <img class="col-12 logo" src="./img/logo.jpg" alt="">
-            <h2 class="derechos"> Todos los derechos reservados </h2> 
+            <h4 class="derechos"> Todos los derechos reservados </h4> 
         </div>    
+
+
+ 
     </footer>
 
     <!-- JavaScript Bundle with Popper -->
