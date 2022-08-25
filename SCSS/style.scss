@@ -1,0 +1,275 @@
+/* aplicamos reset*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* color fondo de paginas*/
+body{
+    background-image: linear-gradient(to bottom, rgb(74, 166, 228), lightblue);
+}
+
+
+    .h1{
+        font-size: 1.5rem;
+    }
+
+    /* color y estilo del menu*/
+
+    .menu{
+        background-color: rgb(142, 205, 226);
+    }
+    header nav ul li:hover{
+        background-color: cornflowerblue;
+        transform: scale(0.9);
+    box-shadow: 1px 1px 10px black;
+    }  
+    .caja{
+        background-color:rgb(235, 238, 241);
+        padding: 2px;
+        border: 2px solid rgb(109, 132, 233);
+        display: inline-block;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+            /*INDEX*/
+    /* imagen oficina*/
+    .oficina{
+    width: 100%;
+    height: 300px;
+    }
+
+
+
+       /* h2 */
+    .subtitulo{
+    margin: 20px 20px 20px 0px;
+    }
+
+    .subtitulo2{
+/*  height: 100px;*/
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height: 10rem;
+    }
+
+
+/* vision mision y valores */
+
+.padre{    
+    height: 400px;
+    font-family:sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+}
+
+
+/* mediaqueries*/
+@media screen and (max-width: 600px){
+    .padre{
+        height: 480px;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+    
+        
+}
+
+/* mediaqueries*/
+@media screen and (max-width: 940px){
+    .padre{
+        height: 480px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+           
+}
+
+/* fotos y texto de auto, casa y comercio*/
+.padre2{
+    height: 500px;
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    
+    
+
+
+    grid-template-areas: 
+		    "foto1 foto2 foto3"
+		    "parrafoSec1 parrafoSec2 parrafoSec3"
+}
+        /* fotos del index */
+
+.fotoUno{
+   grid-area: fotoUno;
+}
+
+.fotoDos{
+    grid-area: fotoDos;
+}
+
+.fotoTres{
+    grid-area: fotoTres;
+}
+
+/* parrados dentro de las fotos de auto, casa y comercio*/
+
+.parrafoSec1{
+    grid-area: parrafoSec1;
+}
+
+.parrafoSec2{
+    grid-area: parrafoSec2;
+    
+}
+
+.parrafoSec3{
+    grid-area: parrafoSec3;
+    
+}
+
+
+/* mediaqueries*/
+@media screen and (max-width: 600px){
+.padre2{
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: repeat(auto);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    
+
+    
+    
+
+    
+    grid-template-areas: 
+                "fotoUno"
+                "parrafoSec1"
+                "fotoDos"
+                "parrafoSec2"
+                "fotoTres"
+                "parrafoSec3"
+}
+
+
+
+.parrafoSec1{
+    margin-top: 1rem;
+}
+
+.parrafoSec2{
+    margin-top: 1rem;
+}
+
+.parrafoSec3{
+    margin-top: 1rem;
+}
+}
+
+@media screen and (max-width: 940px){
+.padre2{
+    grid-template-columns: auto ;
+    grid-template-rows: repeat(auto);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    grid-template-areas: 
+    "fotoUno"
+    "parrafoSec1"
+    "fotoDos"
+    "parrafoSec2"
+    "fotoTres"
+    "parrafoSec3"
+
+    }
+}
+
+
+.SectorSiniestros{
+    height: 350px;
+}
+
+.SiniestroAuto{
+font-size: x-large;
+}
+
+.siniestroTres{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+        
+    
+
+    grid-template-areas: 
+                        "Icono1 Dato1 Dato1Cont"
+                        "Icono2 Dato2 Dato2Cont"
+                        "Icono3 Dato3 Dato3Cont";
+
+}
+
+.Icono1{
+    grid-area: Icono1;
+    
+}
+
+.Icono2{
+    grid-area: Icono2;
+}
+
+.Icono3{
+    grid-area: Icono3;
+}
+
+.Dato1{
+    grid-area: Dato1;
+    font-size: x-large;
+}
+
+.Dato2{
+    grid-area: Dato2;
+    font-size: x-large;
+}
+
+.Dato3{
+    grid-area: Dato3;
+    font-size: x-large;
+}
+
+.Dato1Cont{
+    grid-area: Dato1Cont;
+    font-size: larger;
+}
+
+.Dato2Cont{
+    grid-area: Dato2Cont;
+    font-size: larger;
+}
+
+.Dato3Cont{
+    grid-area: Dato3Cont;
+    font-size: larger;
+}
+
+
+
+/*centrado del footer*/
+    .derechos {
+    text-align: center;
+    font-size: 16px;
+    }
+
+    .logo{
+        width: 8%;
+    }
