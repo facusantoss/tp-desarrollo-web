@@ -1,3 +1,9 @@
+.padre {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr; }
+
 /* aplicamos reset*/
 * {
   margin: 0px;
@@ -45,11 +51,7 @@ header nav ul li:hover {
 
 /* vision mision y valores */
 .padre {
-  height: 400px;
-  font-family: sans-serif;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 1fr; }
+  height: 400px; }
 
 /* mediaqueries*/
 @media screen and (max-width: 600px) {
@@ -76,6 +78,7 @@ header nav ul li:hover {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "foto1 foto2 foto3" "parrafoSec1 parrafoSec2 parrafoSec3";
   grid-template-areas: "foto1 foto2 foto3" "parrafoSec1 parrafoSec2 parrafoSec3"; }
 
 /* fotos del index */
