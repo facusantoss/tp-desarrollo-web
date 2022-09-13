@@ -307,6 +307,7 @@ grid-template-areas:
         "fotoSeis parrafoTer3"
         "fotoSiete parrafoTer4"
         "fotoOcho parrafoTer5"
+        "fotoNueve parrafoTer6"
     
 }
 
@@ -376,6 +377,19 @@ transform: scale(1.1);
 transform: scale(1.1);
 }
 
+.fotoNueve{
+    width: 150px;
+    height: 100px;
+    border-style: solid;
+    margin: 20px 20px 20px 70px;
+    box-shadow: 2px 8px 10px black; 
+    grid-area: fotoNueve;    
+}
+
+.fotoNueve:hover{
+transform: scale(1.1);
+}
+
 
 .parrafoTer1{
     background-color:rgb(182, 220, 245);
@@ -425,6 +439,16 @@ transform: scale(1.1);
     margin: 20px;
     padding: 20px;
     grid-area: parrafoTer5;
+}
+
+.parrafoTer6{
+    background-color: rgb(182, 220, 245);
+    text-align: center;
+    border-style: solid;
+    border-width: 1.5px;
+    margin: 20px;
+    padding: 20px;
+    grid-area: parrafoTer6;
 }
 
 /* mediaqueries*/
