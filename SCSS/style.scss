@@ -1,4 +1,7 @@
 
+
+
+@import "base/variables";
 @import "base/listas";
 @import "base/mixin";
 @import "base/extend";
@@ -59,152 +62,139 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
 height: 10rem;
     }
 
-
-/* vision mision y valores */
-
-.padre{    
-    height: 400px;
-    @extend %grid;
-}
-
-
-/* mediaqueries*/
-@media screen and (max-width: 600px){
-    .padre{
-        height: 480px;
-        grid-template-columns: auto ;
-        grid-template-rows: auto auto auto;
+    .empresa{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        justify-items: center;
-        align-items: center;
     }
     
-        
-}
-
-/* mediaqueries*/
-@media screen and (max-width: 940px){
-    .padre{
-        height: 480px;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        justify-content: center;
+    .cards{
+        width: 350px;
+        margin: 10px;
+        padding: 20px;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+        background: rgba(255, 255, 255, 0.3);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 15px;
     }
-           
-}
+    
+    .cards h3{
+        font-weight: 600;
+        margin-top: 20px;
+        color: nth($colores, 4);
+    }
+    
+    .cards p{
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        color: nth($colores, 4);
+        letter-spacing: 0.5px;
+    }
+    
 
-/* fotos y texto de auto, casa y comercio*/
-.padre2{
+.container{
     @include box-model;
-    
-
-    grid-template-areas: 
-		    "foto1 foto2 foto3"
-		    "parrafoSec1 parrafoSec2 parrafoSec3"
-}
-        /* fotos del index */
-
-.fotoUno{
-   grid-area: fotoUno;
 }
 
-.fotoDos{
-    grid-area: fotoDos;
+.tarje1{
+    grid-area: tarje1;
+}
+.tarje2{
+    grid-area: tarje2;
+}
+.tarje3{
+    grid-area: tarje3;
 }
 
-.fotoTres{
-    grid-area: fotoTres;
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
 }
 
-/* parrados dentro de las fotos de auto, casa y comercio*/
-
-.parrafoSec1{
-    grid-area: parrafoSec1;
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.7);
 }
 
-.parrafoSec2{
-    grid-area: parrafoSec2;
-    
+.container .card img{
+    width: 330px;
+    height: 220px;
 }
 
-.parrafoSec3{
-    grid-area: parrafoSec3;
-    
+.container .card h4{
+    font-weight: 600;
 }
 
-
-/* mediaqueries*/
-@media screen and (max-width: 600px){
-.padre2{
-    display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: repeat(auto);
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    
-
-    
-    
-
-    
-    grid-template-areas: 
-                "fotoUno"
-                "parrafoSec1"
-                "fotoDos"
-                "parrafoSec2"
-                "fotoTres"
-                "parrafoSec3"
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 400;
 }
 
+.container .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
 
-
-.parrafoSec1{
-    margin-top: 1rem;
 }
 
-.parrafoSec2{
-    margin-top: 1rem;
-}
-
-.parrafoSec3{
-    margin-top: 1rem;
-}
-}
-
-@media screen and (max-width: 940px){
-.padre2{
-    grid-template-columns: auto ;
-    grid-template-rows: repeat(auto);
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-
-    grid-template-areas: 
-    "fotoUno"
-    "parrafoSec1"
-    "fotoDos"
-    "parrafoSec2"
-    "fotoTres"
-    "parrafoSec3"
-
+@media screen and (max-width: 750px){
+    .container{
+     margin-bottom: 900px;
+    grid-template-areas: "tarje1"
+    "tarje2"
+    "tarje3";
     }
 }
+
+@media screen and (max-width: 1080px) and (min-width: 750px){
+    .container{
+        margin-bottom: 900px;
+        grid-template-areas: "tarje1"
+                            "tarje2"
+                            "tarje3";
+    }
+} 
 
 
 .SectorSiniestros{
     height: 350px;
+    background-color: $color-secsiniestro;
+    padding: 50px;
+    color: nth($colores, 5);
+    border-style: solid;
+    border-color: black;
+    margin: 20px;
+    
 }
 
+
+
+
 .SiniestroAuto{
-font-size: x-large;
+font-size: 30px;
+text-align: center;
+
+}
+
+.SiniestroAutoP{
+    text-align: center;
 }
 
 .siniestroTres{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-        
+    @extend %grid;
+    text-align: center;
+    justify-content: space-around;
     
 
     grid-template-areas: 
@@ -257,33 +247,111 @@ font-size: x-large;
     font-size: larger;
 }
 
+@media screen and (max-width: 650px){
+    .SectorSiniestros{
+        margin-bottom: 100px;
+        height: 650px;
+    }
 
+    
+    
+    .siniestroTres{
+        grid-template-areas: 
+                        "Icono1" 
+                        "Dato1"
+                        "Dato1Cont"
+                        "Icono2" 
+                        "Dato2"
+                        "Dato2Cont"
+                        "Icono3"
+                        "Dato3"
+                        "Dato3Cont";
+    }
+
+    .imgC{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 650px){
+    .SectorSiniestros{
+        margin-bottom: 150px;
+        height: 500px;
+        
+    }   
+}
+
+/* Blog del index*/
+.SeccionBlog{
+    margin-top: 50px;
+}
+
+.titBlog{
+    font-size: 35px;
+}
+
+.pBlog{
+    font-size: 20px;
+}
+
+.MiniBlog{
+ @extend %grid;
+grid-template-areas: "tarj1 tarj2 tarj3";
+justify-content: space-around;
+}
+
+.tarj1{
+    grid-area: tarj1;
+}
+
+.tarj2{
+    grid-area: tarj2;
+}
+
+.tarj3{
+    grid-area: tarj3;
+}
+
+@media screen and (max-width: 900px){
+    .MiniBlog{
+       
+
+        grid-template-areas: "tarj1"
+                             "tarj2"
+                             "tarj3";
+    }
+}
 
 /*centrado del footer*/
+    
+
+
     .derechos {
     text-align: center;
     font-size: 16px;
     }
 
     .logo{
-        width: 8%;
+        width: 5%;
+        margin-top: 20px;
+        
     }
+
+
 
 /* PAGINA DE COMPAÑÍAS/*    
 
 /* foto compañías de seguro*/
 .aseguradora{
-    height: 200px;
-    width: 280px;
-    margin: 20px;
-    padding: 5px;
-    
+    height: 70px;
+    width: 140px;
+    margin: 40px;
+    justify-content: space-around;
+    justify-items: space-between;
+    align-items: space-between;
 }
 
 
-.logo{
-width: 8%;
-}
 
 /* h2 de compañia*/
 
@@ -292,13 +360,57 @@ width: 8%;
     font-family:cursive
 }
 
+.cias{
+    @extend %grid;
+    justify-content:space-around;
+    grid-template-areas: "compa1 compa2"
+                        "compa3 compa4"
+                        "compa5 compa6";
+}
 
+.compa1{
+    grid-area: compa1;
+}
+
+.compa2{
+    grid-area: compa2;
+}
+
+.compa3{
+    grid-area: compa3;
+}
+
+.compa4{
+    grid-area: compa4;
+}
+
+.compa5{
+    grid-area: compa5;
+}
+
+.compa6{
+    grid-area: compa6;
+}
+
+@media screen and (max-width: 500px){
+    .cias{
+        grid-template-areas: "compa1"
+        "compa2"
+        "compa3"
+        "compa4"
+        "compa5"
+        "compa6";
+    }
+    
+    .aseguradora{
+    height: 120px;
+    width: 200px;
+    }
+}
 /* PAGINA DE SEGUROS Y SINIESTROS*/
 
 .SegSin{
-display: grid;
-grid-template-columns: auto ;
-grid-template-rows: auto;
+    @extend %grid;
 
 
 grid-template-areas: 
@@ -452,15 +564,132 @@ transform: scale(1.1);
 }
 
 /* mediaqueries*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
 .SegSin{	
 justify-content: center;
     justify-items: center;
     align-items: center;
+    grid-template-areas: "fotoCuatro"
+    "parrafoTer1"
+    "fotoCinco"
+    "parrafoTer2"
+    "fotoSeis"
+    "parrafoTer3"
+    "fotoSiete"
+    "parrafoTer4"
+    "fotoOcho"
+    "parrafoTer5"
+    "fotoNueve"
+    "parrafoTer6";
 }
+.logo{
+    width: 15%;
+    }
 }
 
 
+
+/* BLOG*/
+
+.padre3{
+    @extend %grid;
+    justify-content: space-evenly;
+    grid-template-areas: "tarjeta1 tarjeta2 tarjeta3"
+    "tarjeta4 tarjeta5 tarjeta6"
+    "tarjeta7 tarjeta8 tarjeta9"
+    "tarjeta10 tarjeta11 tarjeta12";
+
+}
+
+.tarjeta1{
+    grid-area: tarjeta1;
+  }
+
+  .tarjeta2{
+    grid-area: tarjeta2;
+  }
+
+  .tarjeta3{
+    grid-area: tarjeta3;
+  }
+
+  .tarjeta4{
+    grid-area: tarjeta4;
+  }
+
+  .tarjeta5{
+    grid-area: tarjeta5;
+  }
+
+  .tarjeta6{
+    grid-area: tarjeta6;
+  }
+
+  .tarjeta7{
+    grid-area: tarjeta7;
+  }
+
+  .tarjeta8{
+    grid-area: tarjeta8;
+  }
+
+  .tarjeta9{
+    grid-area: tarjeta9;
+  }
+
+  .tarjeta10{
+    grid-area: tarjeta10;
+  }
+
+  .tarjeta11{
+    grid-area: tarjeta11;
+  }
+
+  .tarjeta12{
+    grid-area: tarjeta12;
+  }
+
+@media screen and (max-width: 600px) {
+    .padre3 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      grid-template-areas: "tarjeta1"  
+      "tarjeta2"
+      "tarjeta3"
+      "tarjeta4"
+      "tarjeta5"
+      "tarjeta6"
+      "tarjeta7"
+      "tarjeta8"
+      "tarjeta9"
+      "tarjeta10"
+      "tarjeta11"
+      "tarjeta12";
+    }
+    .logo{
+        width: 10%;
+        }
+
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 600px){
+    .padre3 {
+        grid-template-areas: "tarjeta1 tarjeta2"
+        "tarjeta3 tarjeta4"
+        "tarjeta5 tarjeta6"
+        "tarjeta7 tarjeta8"
+        "tarjeta9 tarjeta10"
+        "tarjeta11 tarjeta12";
+    }
+    .logo{
+        width: 15%;
+        }
+}
 
 
 /* parraro aclaratorio del formulario */
@@ -480,12 +709,4 @@ margin: 20px;
 /* interior de formulario*/
 .datos{
 padding: 5px;
-}
-
-
-.padre3{
-    justify-content: space-evenly;
-    display: grid;
-    grid-template-columns: auto auto auto ;
-    grid-template-rows: 0.5fr 1fr;
 }
